@@ -1,6 +1,6 @@
 class PontesController < ApplicationController
   before_action :set_ponte, only: :destroy
-  before_action :set_ritmo, only: [:new, :create]
+  before_action :set_estado, only: [:new, :create]
 
   def new
     @ponte = Ponte.new
@@ -8,7 +8,7 @@ class PontesController < ApplicationController
 
   def create
     @ponte = Ponte.new(ponte_params)
-    @ponte.list = @ponte
+    @ponte.estado = @estado
     if @ponte.save
       redirect_to ritmo_path(@ritmo)
     else
@@ -18,13 +18,13 @@ class PontesController < ApplicationController
 
   def destroy
     @ponte.destroy
-    redirect_to list_path(@ponte.ritmo)
+    redirect_to estado_path(@ponte.ritmo)
   end
 
   private
 
   def ponte_params
-    params.require(:ponte).permit(:comment, :estado_id)
+    params.require(:ponte).permit(:comment, :ritmo_id)
   end
 
   def set_ponte

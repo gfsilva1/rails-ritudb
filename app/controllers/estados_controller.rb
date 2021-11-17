@@ -15,7 +15,7 @@ class EstadosController < ApplicationController
   end
 
   def create
-    @estado = Estado.new(list_params)
+    @estado = Estado.new(estado_params)
     if @estado.save
       redirect_to estado_path(@estado)
     else
@@ -37,5 +37,5 @@ class EstadosController < ApplicationController
   def estado_params
     params.require(:estado).permit(:nome)
   end
-end
+
 end
