@@ -1,29 +1,33 @@
-<select name="ritmos">
-  <option value="AL">Alabama</option>
-  <option value="AK">Alaska</option>
-  <option value="AZ">Arizona</option>
-  <option value="AR">Arkansas</option>
-  <option value="CA">California</option>
-  <option value="CO">Colorado</option>
-  <option value="CT">Connecticut</option>
-  <option value="DE">Delaware</option>
-  <option value="DC">District Of Columbia</option>
-  <option value="FL">Florida</option>
-</select>
 
-<select name="ritmos" data-controller="select2">
 
 <div class="container py-5">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
-        <h3>Add a movie to your <%= @estado.nome %> list</h3>
+        <h3>Adicionar ritmo para <%= @estado.nome %> </h3>
         <%= simple_form_for [@estado, @ponte] do |f| %>
-          <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
-          <%= f.input :ritmo, collection: ['Tecnobrega','Parapum'], input_html: { data: { controller: 'select2' }} %>
+          <%= f.input :comment, placeholder: '
+          Descrever o ritmo' %>
+          <%= f.association :ritmo, collection: ['Tecnobrega','Parapum'], input_html: { data: { controller: 'select2' }} %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+
+  <select name="ritmos">
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="DC">District Of Columbia</option>
+    <option value="FL">Florida</option>
+  </select>
+
+<select name="ritmos" data-controller="select2">
