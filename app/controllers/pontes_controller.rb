@@ -10,7 +10,7 @@ class PontesController < ApplicationController
     @ponte = Ponte.new(ponte_params)
     @ponte.estado = @estado
     if @ponte.save
-      redirect_to ritmo_path(@ritmo)
+      redirect_to estado_path(@ritmo)
     else
       render :new
     end

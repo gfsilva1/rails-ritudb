@@ -2,7 +2,7 @@
   <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('mapa_norte.png') %>)">
     <h1><%= @estado.nome %> Imagem com zoom in no estado</h1>
   </div>
-    <span class="movie-tag"><%= pluralize(@estado.ritmos.size, 'ritmos') %></span>
+    <span><%= pluralize(@estado.ritmos.size, 'ritmos') %></span>
 </div>
 
   <div>

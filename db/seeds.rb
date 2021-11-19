@@ -38,4 +38,5 @@ Estado.create(nome:"Santa Catarina")
 
 
 
-Ritmo.create(nome:"Tecnobrega")
+Ritmo.create!(nome:"Tecnobrega", descricao:"4 por 4")
+Ritmo.create!(nome:"Timbalada", descricao:"7 por 5")
