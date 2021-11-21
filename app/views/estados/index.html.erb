@@ -13,9 +13,11 @@
 
 
   <div class="d-flex justify-content-between" style="margin-bottom:10px">
-    <% @estados.each do |estado| %>
-    <%= estado.nome%>
-    <% end %>
+    <ul>
+      <% @estados.each do |estado| %>
+      <%= link_to estado.nome, new_estado_ponte_path(estado[:id]) %>
+      <% end %>
+    </ul>
   </div>
 
   <div class="d-flex" style="justify-content:center">Escolha uma região</div>

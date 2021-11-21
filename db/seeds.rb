@@ -40,3 +40,7 @@ Estado.create(nome:"Santa Catarina")
 
 Ritmo.create!(nome:"Tecnobrega", descricao:"4 por 4")
 Ritmo.create!(nome:"Timbalada", descricao:"7 por 5")
+Ritmo.create!(nome:"Blefs", descricao:"asd")
+Ritmo.create!(nome:"Blefs band", descricao:"aaa")
+Ritmo.create!(nome:"Batera loka", descricao:"5")
+Ritmo.create!(nome:"Afro", descricao:"33")

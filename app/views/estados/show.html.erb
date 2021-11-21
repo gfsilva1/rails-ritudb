@@ -1,6 +1,6 @@
 <div class="position-relative">
   <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('mapa_norte.png') %>)">
-    <h1><%= @estado.nome %> Imagem com zoom in no estado</h1>
+    <h1><%= @estado.nome %></h1>
   </div>
     <span><%= pluralize(@estado.ritmos.size, 'ritmos') %></span>
 </div>
@@ -25,3 +25,5 @@
       </div>
     <% end %>
   </div>
+  <%= link_to "Criar Ritmo", new_estado_ponte_path(@estado[:id]) %>
+  <button><%= link_to "Voltar", root_path %></button>
