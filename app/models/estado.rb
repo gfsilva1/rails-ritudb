@@ -3,5 +3,5 @@ class Estado < ApplicationRecord
   has_many :ritmos, through: :pontes
 
 
-  validates :nome, uniqueness: true, presence: true
+  validates :nome, presence: true
 end
