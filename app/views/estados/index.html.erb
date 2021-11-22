@@ -15,6 +15,7 @@
   <div class="d-flex justify-content-between" style="margin-bottom:10px">
     <ul>
       <% @estados.each do |estado| %>
+      <%= estado.nome %>
       <%= link_to estado.nome, new_estado_ponte_path(estado[:id]) %>
       <% end %>
     </ul>
