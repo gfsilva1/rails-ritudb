@@ -15,7 +15,7 @@
   <div class="d-flex justify-content-between" style="margin-bottom:10px">
     <ul>
       <% @estados.each do |estado| %>
-      <%= link_to estado.nome, new_estado_ponte_path(estado[:id]) %>
+      <%= link_to estado.nome, new_estado_ponte_path(estado[:id]), class: "btn btn-ghost" %>
       <% end %>
     </ul>
   </div>

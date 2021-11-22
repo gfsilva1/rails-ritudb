@@ -5,17 +5,17 @@
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Ritmos de <%= @estado.nome %> </h3>
-        <button><%= link_to "Ver", estado_path(@estado[:id])%></button>
+        <%= link_to "Ver", estado_path(@estado[:id]), class: "btn btn-ghost" %>
       <div class="bg-white rounded p-3 shadow">
         <h3>Adicionar ritmo para <%= @estado.nome %> </h3>
         <%= simple_form_for [@estado, @ponte] do |f| %>
           <%= f.association :ritmo, label_method: :nome, value_method: :id, include_blank: false, input_html: { data: { controller: 'select2' }} %>
           <%= f.input :comment, placeholder: '
           Descrever o ritmo' %>
-          <%= f.submit class: 'btn btn-flat' %>
+          <%= f.submit class: "btn btn-ghost" %>
         <% end %>
       </div>
-      <button><%= link_to "Voltar", root_path %></button>
+      <%= link_to "Voltar", root_path, class: "btn btn-ghost" %>
     </div>
   </div>
 </div>
