@@ -28,13 +28,10 @@ Estado.create(nome:"Rio Grande do Norte")
 Estado.create(nome:"Rio Grande do Sul")
 Estado.create(nome:"Rondônia")
 Estado.create(nome:"Roraima")
-Estado.create(nome:"Santa Catarina")
 Estado.create(nome:"São Paulo")
-Estado.create(nome:"Santa Catarina")
 Estado.create(nome:"Sergipe")
-Estado.create(nome:"Santa Catarina")
 Estado.create(nome:"Tocantins")
-Estado.create(nome:"Santa Catarina")
+
 
 
 
