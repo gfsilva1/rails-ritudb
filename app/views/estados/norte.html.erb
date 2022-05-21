@@ -1,0 +1,19 @@
+<div class="texto">
+  <h1>Região</h1>
+  <p><%= link_to'Norte'%></p>
+  <p>Nordeste</p>
+  <p>Centro</p>
+  <p>Oeste</p>
+  <p>Sudeste</p>
+  <p>Sul</p>
+</div>
+<div class="texto">
+  <h1>Estados</h1>
+</div>
+<% @estados_norte.each do |rit| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/photos/empty-3d-geographic-map-abstract-levels-render-picture-id1328792990)">
+    <div>
+        <%= link_to rit.nome, norte_acre_path %>
+    </div>
+  </div>
+<% end %>

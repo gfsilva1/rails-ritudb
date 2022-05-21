@@ -1,29 +1,19 @@
-<div class="position-relative">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('mapa_norte.png') %>)">
-    <h1><%= @estado.nome %></h1>
-  </div>
-    <span><%= pluralize(@estado.ritmos.size, 'ritmos') %></span>
+<div class="texto">
+  <h1>Região</h1>
+  <p><%= link_to'Norte'%></p>
+  <p>Nordeste</p>
+  <p>Centro</p>
+  <p>Oeste</p>
+  <p>Sudeste</p>
+  <p>Sul</p>
 </div>
-
-  <div class="row my-2">
-    <% @estado.ritmos.each do |ritmo| %>
-      <% ponte = Ponte.find_by(estado: @estado, ritmo: ritmo) %>
-      <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
-        <div class="bg-white rounded shadow h-100">
-          <%= image_tag("ritmo.PNG", class: "ritmo-img rounded-top") %>
-          <div class="p-3 rounded-bottom d-flex flex-column">
-            <strong><%= ritmo.nome %> <span class="text-muted font-weight-normal">• <%= ritmo.dificuldade %> <i class="fa fa-volume-up" aria-hidden="true"></i> </span></strong>
-
-            <div class="d-flex align-items-end justify-content-between pt-4">
-              <div>
-                <i class="fas fa-quote-left mr-2"></i><small class="flex-grow-1"><%= ponte.comment %></small>
-              </div>
-              <small class="text-right flex-shrink-0"><%= link_to 'delete', ponte_path(ponte), method: :delete, data: { confirm: "Are you sure you want to remove #{ritmo.nome} from your #{@estado.nome} list"}, class: 'text-danger' %></small>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+<div class="texto">
+  <h1>Acre</h1>
+</div>
+<% @acre.each do |rit| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/photos/portrait-of-a-smiling-beautiful-boy-listening-music-with-headphones-picture-id1356532153)">
+    <div>
+        <%= rit.nome %>
+    </div>
   </div>
-  <%= link_to "Criar Ritmo", new_estado_ponte_path(@estado[:id]), class: "btn btn-ghost" %>
-  <%= link_to "Voltar", root_path, class: "btn btn-ghost" %>
+<% end %>
