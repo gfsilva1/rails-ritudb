@@ -1,0 +1,14 @@
+<div>
+  <h1>Região Norte Nordeste Centro Oeste Sudeste Sul</h1>
+</div>
+<div>
+  <h1>Estados Acre Amazonas Amapá Pará Rondônia Roraima Tocantins</h1>
+</div>
+
+<% @ritmos.each do |rit| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <div>
+        <%= rit.nome %>
+    </div>
+  </div>
+<% end %>

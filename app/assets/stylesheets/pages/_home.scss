@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+body {
+  background-color: #EAF0EB;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+p {
+  font-size: 10px;
+}
+
+.texto {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-inline-start: 2px;
+}
